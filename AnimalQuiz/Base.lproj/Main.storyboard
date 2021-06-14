@@ -40,6 +40,9 @@
                                         <rect key="frame" x="131.66666666666666" y="129" width="48" height="36"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="Start"/>
+                                        <connections>
+                                            <segue destination="X94-8y-wRp" kind="show" id="go0-ha-Cim"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -85,6 +88,12 @@
                             <constraint firstItem="QJ3-xa-g2S" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="rlj-HT-he4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="catLabel" destination="8Rg-qd-dFC" id="c6m-Y3-5nN"/>
+                        <outlet property="dogLabel" destination="QJ3-xa-g2S" id="XmF-4Z-M07"/>
+                        <outlet property="rabbitLabel" destination="qm8-m0-GZl" id="cBk-Pd-mT0"/>
+                        <outlet property="turtleLabel" destination="7h6-Eq-mkG" id="HJ4-Dg-h6g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,11 +104,12 @@
             <objects>
                 <viewController id="X94-8y-wRp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rfr-zZ-Aae">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="e0Y-e9-vi9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="gbI-pM-F9L"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mOY-uA-hLO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
