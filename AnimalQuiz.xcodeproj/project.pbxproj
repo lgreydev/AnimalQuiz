@@ -62,15 +62,23 @@
 		5E2CF83E26775E57007BB2EB /* AnimalQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				5E2CF83F26775E57007BB2EB /* AppDelegate.swift */,
-				5E2CF84126775E57007BB2EB /* SceneDelegate.swift */,
+				5E2CF85726775FCE007BB2EB /* SupportingFiles */,
 				5E2CF84326775E57007BB2EB /* ViewController.swift */,
 				5E2CF84526775E57007BB2EB /* Main.storyboard */,
-				5E2CF84826775E5B007BB2EB /* Assets.xcassets */,
-				5E2CF84A26775E5B007BB2EB /* LaunchScreen.storyboard */,
 				5E2CF84D26775E5B007BB2EB /* Info.plist */,
 			);
 			path = AnimalQuiz;
+			sourceTree = "<group>";
+		};
+		5E2CF85726775FCE007BB2EB /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				5E2CF83F26775E57007BB2EB /* AppDelegate.swift */,
+				5E2CF84126775E57007BB2EB /* SceneDelegate.swift */,
+				5E2CF84826775E5B007BB2EB /* Assets.xcassets */,
+				5E2CF84A26775E5B007BB2EB /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
