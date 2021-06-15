@@ -41,7 +41,7 @@
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="Start"/>
                                         <connections>
-                                            <segue destination="V5y-r4-oIb" kind="show" id="go0-ha-Cim"/>
+                                            <segue destination="V5y-r4-oIb" kind="show" identifier="start" id="go0-ha-Cim"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -253,7 +253,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Question" id="gbI-pM-F9L"/>
                     <connections>
-                        <segue destination="aoq-UO-5aT" kind="show" id="BFm-dh-vt0"/>
+                        <segue destination="aoq-UO-5aT" kind="show" identifier="start" id="BFm-dh-vt0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mOY-uA-hLO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -310,7 +310,7 @@
         <!--Navigation Controller-->
         <scene sceneID="G8q-ZZ-ick">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V5y-r4-oIb" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="start" automaticallyAdjustsScrollViewInsets="NO" id="V5y-r4-oIb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="z8z-Ih-E1n"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wSK-8I-9AN">

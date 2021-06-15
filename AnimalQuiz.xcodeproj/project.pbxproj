@@ -66,10 +66,10 @@
 		5E2CF83E26775E57007BB2EB /* AnimalQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				5E2CF85E26790381007BB2EB /* View */,
+				5E2CF85D2679030D007BB2EB /* Models */,
 				5E2CF85726775FCE007BB2EB /* SupportingFiles */,
 				5E2CF85A26788BE5007BB2EB /* ViewControllers */,
-				5E2CF84526775E57007BB2EB /* Main.storyboard */,
-				5E2CF84D26775E5B007BB2EB /* Info.plist */,
 			);
 			path = AnimalQuiz;
 			sourceTree = "<group>";
@@ -77,10 +77,10 @@
 		5E2CF85726775FCE007BB2EB /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				5E2CF84D26775E5B007BB2EB /* Info.plist */,
 				5E2CF83F26775E57007BB2EB /* AppDelegate.swift */,
 				5E2CF84126775E57007BB2EB /* SceneDelegate.swift */,
 				5E2CF84826775E5B007BB2EB /* Assets.xcassets */,
-				5E2CF84A26775E5B007BB2EB /* LaunchScreen.storyboard */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -93,6 +93,22 @@
 				5E2CF85B2678D1E0007BB2EB /* ResultsViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5E2CF85D2679030D007BB2EB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5E2CF85E26790381007BB2EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E2CF84526775E57007BB2EB /* Main.storyboard */,
+				5E2CF84A26775E5B007BB2EB /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,7 +336,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LGVM9RAH4N;
-				INFOPLIST_FILE = AnimalQuiz/Info.plist;
+				INFOPLIST_FILE = AnimalQuiz/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,7 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LGVM9RAH4N;
-				INFOPLIST_FILE = AnimalQuiz/Info.plist;
+				INFOPLIST_FILE = AnimalQuiz/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
