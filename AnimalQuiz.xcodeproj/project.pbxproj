@@ -65,10 +65,9 @@
 			isa = PBXGroup;
 			children = (
 				5E2CF85726775FCE007BB2EB /* SupportingFiles */,
-				5E2CF84326775E57007BB2EB /* WelcomeViewController.swift */,
+				5E2CF85A26788BE5007BB2EB /* ViewControllers */,
 				5E2CF84526775E57007BB2EB /* Main.storyboard */,
 				5E2CF84D26775E5B007BB2EB /* Info.plist */,
-				5E2CF85826788B52007BB2EB /* QuestionViewController.swift */,
 			);
 			path = AnimalQuiz;
 			sourceTree = "<group>";
@@ -82,6 +81,15 @@
 				5E2CF84A26775E5B007BB2EB /* LaunchScreen.storyboard */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		5E2CF85A26788BE5007BB2EB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5E2CF84326775E57007BB2EB /* WelcomeViewController.swift */,
+				5E2CF85826788B52007BB2EB /* QuestionViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
