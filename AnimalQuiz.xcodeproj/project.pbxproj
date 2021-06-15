@@ -17,6 +17,10 @@
 		5E2CF85626775F1F007BB2EB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5E2CF85526775F1F007BB2EB /* .gitignore */; };
 		5E2CF85926788B52007BB2EB /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CF85826788B52007BB2EB /* QuestionViewController.swift */; };
 		5E2CF85C2678D1E0007BB2EB /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CF85B2678D1E0007BB2EB /* ResultsViewController.swift */; };
+		5E2CF860267906BE007BB2EB /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CF85F267906BE007BB2EB /* Question.swift */; };
+		5E2CF862267943DC007BB2EB /* ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CF861267943DC007BB2EB /* ResponseType.swift */; };
+		5E2CF864267944A4007BB2EB /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CF863267944A4007BB2EB /* Answer.swift */; };
+		5E2CF86626794556007BB2EB /* AnimalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CF86526794556007BB2EB /* AnimalType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		5E2CF85526775F1F007BB2EB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		5E2CF85826788B52007BB2EB /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		5E2CF85B2678D1E0007BB2EB /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		5E2CF85F267906BE007BB2EB /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		5E2CF861267943DC007BB2EB /* ResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseType.swift; sourceTree = "<group>"; };
+		5E2CF863267944A4007BB2EB /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		5E2CF86526794556007BB2EB /* AnimalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,10 @@
 		5E2CF85D2679030D007BB2EB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5E2CF85F267906BE007BB2EB /* Question.swift */,
+				5E2CF861267943DC007BB2EB /* ResponseType.swift */,
+				5E2CF863267944A4007BB2EB /* Answer.swift */,
+				5E2CF86526794556007BB2EB /* AnimalType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -186,8 +198,12 @@
 				5E2CF84426775E57007BB2EB /* WelcomeViewController.swift in Sources */,
 				5E2CF84026775E57007BB2EB /* AppDelegate.swift in Sources */,
 				5E2CF85926788B52007BB2EB /* QuestionViewController.swift in Sources */,
+				5E2CF860267906BE007BB2EB /* Question.swift in Sources */,
 				5E2CF85C2678D1E0007BB2EB /* ResultsViewController.swift in Sources */,
 				5E2CF84226775E57007BB2EB /* SceneDelegate.swift in Sources */,
+				5E2CF862267943DC007BB2EB /* ResponseType.swift in Sources */,
+				5E2CF864267944A4007BB2EB /* Answer.swift in Sources */,
+				5E2CF86626794556007BB2EB /* AnimalType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
