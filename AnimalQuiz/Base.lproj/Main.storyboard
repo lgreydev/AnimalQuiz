@@ -252,21 +252,51 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Question" id="gbI-pM-F9L"/>
+                    <connections>
+                        <segue destination="aoq-UO-5aT" kind="show" id="BFm-dh-vt0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mOY-uA-hLO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1742" y="72"/>
         </scene>
-        <!--View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="kEF-OZ-ueU">
             <objects>
-                <viewController id="aoq-UO-5aT" sceneMemberID="viewController">
+                <viewController id="aoq-UO-5aT" customClass="ResultsViewController" customModule="AnimalQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TDk-p3-4Be">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xE7-ci-Y74">
+                                <rect key="frame" x="20" y="355.66666666666669" width="350" height="79"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are you" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAi-p7-ZrE">
+                                        <rect key="frame" x="54.666666666666671" y="0.0" width="240.66666666666663" height="46.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What animal are you?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjE-qM-g1a">
+                                        <rect key="frame" x="77.666666666666671" y="56.333333333333307" width="194.66666666666663" height="22.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="YlC-cm-Zat"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xE7-ci-Y74" firstAttribute="leading" secondItem="YlC-cm-Zat" secondAttribute="leading" constant="20" id="evy-3F-F3S"/>
+                            <constraint firstItem="YlC-cm-Zat" firstAttribute="trailing" secondItem="xE7-ci-Y74" secondAttribute="trailing" constant="20" id="hgj-uZ-JMh"/>
+                            <constraint firstItem="xE7-ci-Y74" firstAttribute="centerY" secondItem="TDk-p3-4Be" secondAttribute="centerY" id="trz-4U-FhQ"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="3uG-rW-V8o">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="IuS-Yg-b5P"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lcM-6Y-b1m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

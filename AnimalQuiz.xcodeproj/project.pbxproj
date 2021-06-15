@@ -16,6 +16,7 @@
 		5E2CF85426775EAB007BB2EB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5E2CF85326775EAB007BB2EB /* README.md */; };
 		5E2CF85626775F1F007BB2EB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5E2CF85526775F1F007BB2EB /* .gitignore */; };
 		5E2CF85926788B52007BB2EB /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CF85826788B52007BB2EB /* QuestionViewController.swift */; };
+		5E2CF85C2678D1E0007BB2EB /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CF85B2678D1E0007BB2EB /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		5E2CF85326775EAB007BB2EB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5E2CF85526775F1F007BB2EB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		5E2CF85826788B52007BB2EB /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		5E2CF85B2678D1E0007BB2EB /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			children = (
 				5E2CF84326775E57007BB2EB /* WelcomeViewController.swift */,
 				5E2CF85826788B52007BB2EB /* QuestionViewController.swift */,
+				5E2CF85B2678D1E0007BB2EB /* ResultsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				5E2CF84426775E57007BB2EB /* WelcomeViewController.swift in Sources */,
 				5E2CF84026775E57007BB2EB /* AppDelegate.swift in Sources */,
 				5E2CF85926788B52007BB2EB /* QuestionViewController.swift in Sources */,
+				5E2CF85C2678D1E0007BB2EB /* ResultsViewController.swift in Sources */,
 				5E2CF84226775E57007BB2EB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
