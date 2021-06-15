@@ -295,10 +295,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3uG-rW-V8o">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="IuS-Yg-b5P"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="IuS-Yg-b5P">
+                            <connections>
+                                <segue destination="Zix-wJ-Fo7" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="t91-mz-psd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lcM-6Y-b1m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Zix-wJ-Fo7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2463" y="72"/>
         </scene>
