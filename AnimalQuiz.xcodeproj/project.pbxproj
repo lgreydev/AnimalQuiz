@@ -106,10 +106,10 @@
 		5E2CF85D2679030D007BB2EB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5E2CF85F267906BE007BB2EB /* Question.swift */,
-				5E2CF861267943DC007BB2EB /* ResponseType.swift */,
-				5E2CF863267944A4007BB2EB /* Answer.swift */,
 				5E2CF86526794556007BB2EB /* AnimalType.swift */,
+				5E2CF85F267906BE007BB2EB /* Question.swift */,
+				5E2CF863267944A4007BB2EB /* Answer.swift */,
+				5E2CF861267943DC007BB2EB /* ResponseType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

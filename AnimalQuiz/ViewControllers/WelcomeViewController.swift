@@ -21,10 +21,7 @@ class WelcomeViewController: UIViewController {
 //        rotateAnimalLabel()
     }
 
-    
-    
-    
-    
+
     @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue) {
         // Connect a Triggering Object to the Exit Control
     }

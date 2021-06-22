@@ -13,12 +13,11 @@ struct Question {
     let type: ResponseType
     let answers: [Answer]
     
-    static let question: [Question] = [
-        Question(text: "What food do you like?", type: .single, answers: Self.single),
-        Question(text: "", type: .multiply, answers: Self.multiply),
-        Question(text: "", type: .rage, answers: Self.rage)
+    static let all: [Question] = [
+        Question(text: "What food do you like?", type: .single, answers: Self.single.shuffled()),
+        Question(text: "What do you like do?", type: .multiply, answers: Self.multiply.shuffled()),
+        Question(text: "Do you like car trips?", type: .rage, answers: Self.rage)
     ]
-    
     
     static private let single = [
     Answer(text: "Fish 🐟", type: .cat),
@@ -28,16 +27,16 @@ struct Question {
     ]
     
     static private let multiply = [
-    Answer(text: "", type: .cat),
-    Answer(text: "", type: .dog),
-    Answer(text: "", type: .rabbit),
-    Answer(text: "", type: .turtle)
+    Answer(text: "Sleep 😴", type: .cat),
+    Answer(text: "Eat 🍽", type: .dog),
+    Answer(text: "Run 🏃‍♀️", type: .rabbit),
+    Answer(text: "Swim 🏊‍♂️", type: .turtle)
     ]
     
     static private let rage = [
-    Answer(text: "", type: .cat),
-    Answer(text: "", type: .dog),
-    Answer(text: "", type: .rabbit),
-    Answer(text: "", type: .turtle)
+    Answer(text: "No", type: .cat),
+    Answer(text: "I do not care", type: .rabbit),
+    Answer(text: "I do not care", type: .turtle),
+    Answer(text: "Like", type: .dog)
     ]
 }
