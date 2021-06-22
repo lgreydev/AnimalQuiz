@@ -15,7 +15,7 @@ struct Question {
     
     static let all: [Question] = [
         Question(text: "What food do you like?", type: .single, answers: Self.single.shuffled()),
-        Question(text: "What do you like do?", type: .multiply, answers: Self.multiply.shuffled()),
+        Question(text: "What do you like do?", type: .multiple, answers: Self.multiply.shuffled()),
         Question(text: "Do you like car trips?", type: .rage, answers: Self.rage)
     ]
     

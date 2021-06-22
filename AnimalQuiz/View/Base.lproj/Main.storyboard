@@ -253,6 +253,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Question" id="gbI-pM-F9L"/>
                     <connections>
+                        <outlet property="multipleStackView" destination="5lI-Ym-aBq" id="Led-eo-czk"/>
+                        <outlet property="rangedStackView" destination="FvR-DE-H66" id="Isp-u9-OGS"/>
+                        <outlet property="singleStackView" destination="bWJ-1u-xfo" id="YCz-JK-s6b"/>
                         <segue destination="aoq-UO-5aT" kind="show" identifier="start" id="BFm-dh-vt0"/>
                     </connections>
                 </viewController>

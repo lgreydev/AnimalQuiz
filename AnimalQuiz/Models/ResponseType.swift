@@ -9,5 +9,5 @@ import Foundation
 
 
 enum ResponseType {
-    case single, multiply, rage
+    case single, multiple, rage
 }
