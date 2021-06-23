@@ -211,22 +211,26 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bWJ-1u-xfo">
-                                <rect key="frame" x="172" y="352" width="46" height="150"/>
+                                <rect key="frame" x="165.66666666666666" y="340" width="59" height="174"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lP1-G9-F4t">
-                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="59" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nny-ge-EiF">
-                                        <rect key="frame" x="0.0" y="40" width="46" height="30"/>
+                                        <rect key="frame" x="0.0" y="46" width="59" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRt-4H-ffg">
-                                        <rect key="frame" x="0.0" y="80" width="46" height="30"/>
+                                        <rect key="frame" x="0.0" y="92" width="59" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="386-Cy-2Ss">
-                                        <rect key="frame" x="0.0" y="120" width="46" height="30"/>
+                                        <rect key="frame" x="0.0" y="138" width="59" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                 </subviews>
@@ -254,8 +258,19 @@
                     <navigationItem key="navigationItem" title="Question" id="gbI-pM-F9L"/>
                     <connections>
                         <outlet property="multipleStackView" destination="5lI-Ym-aBq" id="Led-eo-czk"/>
+                        <outlet property="questionLabel" destination="gz6-kb-BkZ" id="LVM-fm-pr4"/>
+                        <outlet property="questionProgressView" destination="eyG-Au-kRH" id="3uR-uK-7Bf"/>
                         <outlet property="rangedStackView" destination="FvR-DE-H66" id="Isp-u9-OGS"/>
                         <outlet property="singleStackView" destination="bWJ-1u-xfo" id="YCz-JK-s6b"/>
+                        <outletCollection property="singleButton" destination="lP1-G9-F4t" collectionClass="NSMutableArray" id="WwC-ba-CS0"/>
+                        <outletCollection property="singleButton" destination="nny-ge-EiF" collectionClass="NSMutableArray" id="4Cw-jy-wWI"/>
+                        <outletCollection property="singleButton" destination="JRt-4H-ffg" collectionClass="NSMutableArray" id="aRn-Uq-4Qy"/>
+                        <outletCollection property="singleButton" destination="386-Cy-2Ss" collectionClass="NSMutableArray" id="38o-Ir-MLn"/>
+                        <outletCollection property="multiLabel" destination="eXf-Kn-ycD" collectionClass="NSMutableArray" id="v8S-bO-uYm"/>
+                        <outletCollection property="multiLabel" destination="HSQ-Kv-YbO" collectionClass="NSMutableArray" id="Mzx-sg-dDO"/>
+                        <outletCollection property="multiLabel" destination="3Fa-Aj-jvu" collectionClass="NSMutableArray" id="kM1-vk-ja2"/>
+                        <outletCollection property="multiLabel" destination="1HZ-OJ-Dmo" collectionClass="NSMutableArray" id="6JB-OI-8RY"/>
+                        <outletCollection property="rangeLabel" destination="03x-z8-Kch" collectionClass="NSMutableArray" id="Wdf-Ir-G8e"/>
                         <segue destination="aoq-UO-5aT" kind="show" identifier="start" id="BFm-dh-vt0"/>
                     </connections>
                 </viewController>

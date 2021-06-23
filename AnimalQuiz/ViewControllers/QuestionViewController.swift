@@ -10,13 +10,23 @@ import UIKit
 class QuestionViewController: UIViewController {
 
     // MARK: - IBOutlets
+    @IBOutlet weak var questionLabel: UILabel!
+    
     @IBOutlet weak var singleStackView: UIStackView!
+    @IBOutlet var singleButton: [UIButton]!
+    
     @IBOutlet weak var multipleStackView: UIStackView!
+    @IBOutlet var multiLabel: [UILabel]!
+    
     @IBOutlet weak var rangedStackView: UIStackView!
+    @IBOutlet var rangeLabel: [UILabel]!
+    
+    @IBOutlet weak var questionProgressView: UIProgressView!
+    
     
     
     // MARK: - Properties
-    var index = 1
+    var index = 2
     
     
     // MARK: - Lifecycle
@@ -37,6 +47,17 @@ class QuestionViewController: UIViewController {
         }
         
         let question = Question.all[index]
+        let answers = question.answers
+        let totalProgress =  Float(index) / Float(Question.all.count)
+        var index = 0
+        
+        questionLabel.text = question.text
+        questionProgressView.setProgress(totalProgress, animated: true)
+        
+        for item in singleButton {
+            item.setTitle("\(answers[index].text)", for: .normal)
+            index += 1
+        }
         
         switch question.type {
         case .single:
