@@ -26,8 +26,8 @@ class QuestionViewController: UIViewController {
     
     
     // MARK: - Properties
-    var index = 1
-    
+    var index = 0
+    var answersChosen: [Answer] = []
     
     
     // MARK: - Lifecycle
@@ -61,7 +61,10 @@ class QuestionViewController: UIViewController {
         /// Block Questions 1 - updateUI
         func updateSingleStack() {
             singleStackView.isHidden = false
-            singleButton.forEach { $0.setTitle(nil, for: .normal) }
+            for (index, button) in singleButton.enumerated() {
+                button.setTitle(nil, for: .normal)
+                button.tag = index
+            }
             for (button, answer) in zip(singleButton, answers) {
                 button.setTitle(answer.text, for: .normal)
             }
@@ -83,7 +86,24 @@ class QuestionViewController: UIViewController {
             rangeLabel.last?.text = answers.last?.text
         }
         
+       
+    }
+    
+    func nextQuestion() {
         // TODO: change to segue to result screen
         index = (index + 1) % Question.all.count
     }
+    
+    @IBAction func singleButtonPressed(_ sender: UIButton) {
+        let index = sender.tag
+        let answers = Question.all[self.index].answers
+        guard index >= 0 && index < answers.count else { fatalError() }
+        let answer = answers[index]
+        answersChosen.append(answer)
+        
+        answersChosen.forEach { print($0.text) }
+        
+//        nextQuestion()
+    }
+    
 }
