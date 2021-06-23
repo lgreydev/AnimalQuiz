@@ -8,7 +8,7 @@
 import UIKit
 
 class QuestionViewController: UIViewController {
-
+    
     // MARK: - IBOutlets
     @IBOutlet weak var questionLabel: UILabel!
     
@@ -26,7 +26,8 @@ class QuestionViewController: UIViewController {
     
     
     // MARK: - Properties
-    var index = 2
+    var index = 1
+    
     
     
     // MARK: - Lifecycle
@@ -38,34 +39,48 @@ class QuestionViewController: UIViewController {
     }
     
     
-    // MARK: - Methods
+    // MARK: - Update View
     func updateUI() {
-        navigationItem.title = "Question \(index + 1)"
-        
-        for stackView in [singleStackView, multipleStackView, rangedStackView] {
-            stackView?.isHidden = true
-        }
         
         let question = Question.all[index]
         let answers = question.answers
         let totalProgress =  Float(index) / Float(Question.all.count)
-        var index = 0
         
+        navigationItem.title = "Question \(index + 1)"
         questionLabel.text = question.text
         questionProgressView.setProgress(totalProgress, animated: true)
         
-        for item in singleButton {
-            item.setTitle("\(answers[index].text)", for: .normal)
-            index += 1
-        }
+        [singleStackView, multipleStackView, rangedStackView].forEach { $0?.isHidden = true }
         
         switch question.type {
-        case .single:
+        case .single: updateSingleStack()
+        case .multiple: updateMultipleStack()
+        case . rage: updateRangedStack()
+        }
+        
+        /// Block Questions 1 - updateUI
+        func updateSingleStack() {
             singleStackView.isHidden = false
-        case .multiple:
+            singleButton.forEach { $0.setTitle(nil, for: .normal) }
+            for (button, answer) in zip(singleButton, answers) {
+                button.setTitle(answer.text, for: .normal)
+            }
+        }
+        
+        /// Block Questions 2 - updateUI
+        func updateMultipleStack() {
             multipleStackView.isHidden = false
-        case . rage:
+            multiLabel.forEach { $0.text = "" }
+            for (label, answer) in zip(multiLabel, answers) {
+                label.text = answer.text
+            }
+        }
+        
+        /// Block Questions 3 - updateUI
+        func updateRangedStack() {
             rangedStackView.isHidden = false
+            rangeLabel.first?.text = answers.first?.text
+            rangeLabel.last?.text = answers.last?.text
         }
         
         // TODO: change to segue to result screen

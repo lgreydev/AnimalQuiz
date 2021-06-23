@@ -37,6 +37,6 @@ struct Question {
     Answer(text: "No", type: .cat),
     Answer(text: "I do not care", type: .rabbit),
     Answer(text: "I do not care", type: .turtle),
-    Answer(text: "Like", type: .dog)
+    Answer(text: "Yes", type: .dog)
     ]
 }
