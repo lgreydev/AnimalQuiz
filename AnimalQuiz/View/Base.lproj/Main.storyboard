@@ -209,6 +209,9 @@
                                         <rect key="frame" x="0.0" y="204" width="350" height="36"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <state key="normal" title="Reply"/>
+                                        <connections>
+                                            <action selector="multiButtonPressed" destination="X94-8y-wRp" eventType="touchUpInside" id="VZm-6W-Rjh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -286,6 +289,10 @@
                         <outletCollection property="multiLabel" destination="1HZ-OJ-Dmo" collectionClass="NSMutableArray" id="6JB-OI-8RY"/>
                         <outletCollection property="rangeLabel" destination="03x-z8-Kch" collectionClass="NSMutableArray" id="Wdf-Ir-G8e"/>
                         <outletCollection property="rangeLabel" destination="9d9-Zh-HZU" collectionClass="NSMutableArray" id="Wah-Zj-rqI"/>
+                        <outletCollection property="multiSwitches" destination="Fkz-2g-WWz" collectionClass="NSMutableArray" id="qRJ-w8-M5M"/>
+                        <outletCollection property="multiSwitches" destination="dUa-iR-LBF" collectionClass="NSMutableArray" id="teO-3O-nL6"/>
+                        <outletCollection property="multiSwitches" destination="GvX-fW-XCj" collectionClass="NSMutableArray" id="IOU-Fl-7Zy"/>
+                        <outletCollection property="multiSwitches" destination="XzL-EB-wVR" collectionClass="NSMutableArray" id="Vfh-UD-9W4"/>
                         <segue destination="aoq-UO-5aT" kind="show" identifier="start" id="BFm-dh-vt0"/>
                     </connections>
                 </viewController>

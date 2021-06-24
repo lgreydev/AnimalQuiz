@@ -11,23 +11,21 @@ class QuestionViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var questionLabel: UILabel!
-    
     @IBOutlet weak var singleStackView: UIStackView!
     @IBOutlet var singleButton: [UIButton]!
-    
     @IBOutlet weak var multipleStackView: UIStackView!
     @IBOutlet var multiLabel: [UILabel]!
-    
+    @IBOutlet var multiSwitches: [UISwitch]!
     @IBOutlet weak var rangedStackView: UIStackView!
     @IBOutlet var rangeLabel: [UILabel]!
-    
     @IBOutlet weak var questionProgressView: UIProgressView!
-    
     
     
     // MARK: - Properties
     var index = 0
     var answersChosen: [Answer] = []
+    var currentAnswers: [Answer] { Question.all[self.index].answers }
+    var question: Question { Question.all[self.index] }
     
     
     // MARK: - Lifecycle
@@ -42,8 +40,6 @@ class QuestionViewController: UIViewController {
     // MARK: - Update View
     func updateUI() {
         
-        let question = Question.all[index]
-        let answers = question.answers
         let totalProgress =  Float(index) / Float(Question.all.count)
         
         navigationItem.title = "Question \(index + 1)"
@@ -65,7 +61,7 @@ class QuestionViewController: UIViewController {
                 button.setTitle(nil, for: .normal)
                 button.tag = index
             }
-            for (button, answer) in zip(singleButton, answers) {
+            for (button, answer) in zip(singleButton, currentAnswers) {
                 button.setTitle(answer.text, for: .normal)
             }
         }
@@ -74,7 +70,7 @@ class QuestionViewController: UIViewController {
         func updateMultipleStack() {
             multipleStackView.isHidden = false
             multiLabel.forEach { $0.text = "" }
-            for (label, answer) in zip(multiLabel, answers) {
+            for (label, answer) in zip(multiLabel, currentAnswers) {
                 label.text = answer.text
             }
         }
@@ -82,28 +78,36 @@ class QuestionViewController: UIViewController {
         /// Block Questions 3 - updateUI
         func updateRangedStack() {
             rangedStackView.isHidden = false
-            rangeLabel.first?.text = answers.first?.text
-            rangeLabel.last?.text = answers.last?.text
+            rangeLabel.first?.text = currentAnswers.first?.text
+            rangeLabel.last?.text = currentAnswers.last?.text
         }
-        
-       
     }
     
     func nextQuestion() {
         // TODO: change to segue to result screen
         index = (index + 1) % Question.all.count
+        updateUI()
     }
     
+    
+    // MARK: - IBAction
     @IBAction func singleButtonPressed(_ sender: UIButton) {
         let index = sender.tag
-        let answers = Question.all[self.index].answers
-        guard index >= 0 && index < answers.count else { fatalError() }
-        let answer = answers[index]
+        guard index >= 0 && index < currentAnswers.count else { fatalError() }
+        let answer = currentAnswers[index]
         answersChosen.append(answer)
-        
-        answersChosen.forEach { print($0.text) }
-        
-//        nextQuestion()
+        answersChosen.forEach { print($0.text) } // delete
+        nextQuestion()
     }
     
+    @IBAction func multiButtonPressed() {
+        for (index, multiSwitch) in multiSwitches.enumerated() {
+            if multiSwitch.isOn && index < currentAnswers.count {
+                let answer = currentAnswers[index]
+                answersChosen.append(answer)
+            }
+        }
+        answersChosen.forEach { print($0.text) } // delete
+        nextQuestion()
+    }
 }
