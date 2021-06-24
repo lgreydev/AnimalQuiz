@@ -18,6 +18,7 @@ class QuestionViewController: UIViewController {
     @IBOutlet var multiSwitches: [UISwitch]!
     @IBOutlet weak var rangedStackView: UIStackView!
     @IBOutlet var rangeLabel: [UILabel]!
+    @IBOutlet weak var rangedSlider: UISlider!
     @IBOutlet weak var questionProgressView: UIProgressView!
     
     
@@ -78,6 +79,7 @@ class QuestionViewController: UIViewController {
         /// Block Questions 3 - updateUI
         func updateRangedStack() {
             rangedStackView.isHidden = false
+            rangedSlider.value = 1.5
             rangeLabel.first?.text = currentAnswers.first?.text
             rangeLabel.last?.text = currentAnswers.last?.text
         }
@@ -110,4 +112,11 @@ class QuestionViewController: UIViewController {
         answersChosen.forEach { print($0.text) } // delete
         nextQuestion()
     }
+    
+    @IBAction func rangedButtonPressed() {
+        let answer = currentAnswers[Int(rangedSlider.value)]
+        answersChosen.append(answer)
+        answersChosen.forEach { print($0.text) } // delete
+    }
+    
 }

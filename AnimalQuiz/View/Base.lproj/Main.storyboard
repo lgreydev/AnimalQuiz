@@ -119,7 +119,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FvR-DE-H66">
                                 <rect key="frame" x="20" y="364" width="350" height="126.33333333333331"/>
                                 <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="2Q1-3g-aDx">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.5" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="2Q1-3g-aDx">
                                         <rect key="frame" x="-2" y="0.0" width="354" height="31"/>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="s5v-RW-fea">
@@ -143,6 +143,9 @@
                                         <rect key="frame" x="0.0" y="90.333333333333314" width="350" height="36"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <state key="normal" title="Reply"/>
+                                        <connections>
+                                            <action selector="rangedButtonPressed" destination="X94-8y-wRp" eventType="touchUpInside" id="Ubj-N0-8fB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -277,6 +280,7 @@
                         <outlet property="multipleStackView" destination="5lI-Ym-aBq" id="Led-eo-czk"/>
                         <outlet property="questionLabel" destination="gz6-kb-BkZ" id="LVM-fm-pr4"/>
                         <outlet property="questionProgressView" destination="eyG-Au-kRH" id="3uR-uK-7Bf"/>
+                        <outlet property="rangedSlider" destination="2Q1-3g-aDx" id="tR4-W1-bHw"/>
                         <outlet property="rangedStackView" destination="FvR-DE-H66" id="Isp-u9-OGS"/>
                         <outlet property="singleStackView" destination="bWJ-1u-xfo" id="YCz-JK-s6b"/>
                         <outletCollection property="singleButton" destination="lP1-G9-F4t" collectionClass="NSMutableArray" id="WwC-ba-CS0"/>
