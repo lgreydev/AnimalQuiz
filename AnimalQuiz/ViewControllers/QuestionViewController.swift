@@ -86,9 +86,15 @@ class QuestionViewController: UIViewController {
     }
     
     func nextQuestion() {
-        // TODO: change to segue to result screen
-        index = (index + 1) % Question.all.count
-        updateUI()
+        print(index)
+        index += 1
+        index < Question.all.count ? updateUI() : performSegue(withIdentifier: "start", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let resultsVC = segue.destination as? ResultsViewController {
+            resultsVC.answers = answersChosen
+        }
     }
     
     
@@ -116,7 +122,7 @@ class QuestionViewController: UIViewController {
     @IBAction func rangedButtonPressed() {
         let answer = currentAnswers[Int(rangedSlider.value)]
         answersChosen.append(answer)
-        answersChosen.forEach { print($0.text) } // delete
+        answersChosen.forEach { print($0.text) }
+        nextQuestion()
     }
-    
 }

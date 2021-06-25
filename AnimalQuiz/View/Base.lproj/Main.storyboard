@@ -312,21 +312,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xE7-ci-Y74">
-                                <rect key="frame" x="20" y="355.66666666666669" width="350" height="79"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="xE7-ci-Y74">
+                                <rect key="frame" x="20" y="310.66666666666669" width="350" height="168.66666666666669"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are you" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAi-p7-ZrE">
-                                        <rect key="frame" x="54.666666666666671" y="0.0" width="240.66666666666663" height="46.333333333333336"/>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="40"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What animal are you?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjE-qM-g1a">
-                                        <rect key="frame" x="77.666666666666671" y="56.333333333333307" width="194.66666666666663" height="22.666666666666664"/>
-                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8eP-eW-yuO">
+                                        <rect key="frame" x="51.333333333333329" y="0.0" width="247.66666666666669" height="102.66666666666667"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What animal are you?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAi-p7-ZrE">
+                                                <rect key="frame" x="0.0" y="0.0" width="247.66666666666666" height="92.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="40"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjE-qM-g1a">
+                                                <rect key="frame" x="123.66666666666667" y="102.66666666666663" width="0.0" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gv4-Cd-Pfc">
+                                        <rect key="frame" x="141" y="132.66666666666663" width="68" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <state key="normal" title="Restart"/>
+                                        <connections>
+                                            <segue destination="Zix-wJ-Fo7" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="Ojb-dg-RfS"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -338,13 +351,11 @@
                             <constraint firstItem="xE7-ci-Y74" firstAttribute="centerY" secondItem="TDk-p3-4Be" secondAttribute="centerY" id="trz-4U-FhQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3uG-rW-V8o">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="IuS-Yg-b5P">
-                            <connections>
-                                <segue destination="Zix-wJ-Fo7" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="t91-mz-psd"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="3uG-rW-V8o"/>
+                    <connections>
+                        <outlet property="animalLabel" destination="JjE-qM-g1a" id="jNR-wq-jEJ"/>
+                        <outlet property="restartButton" destination="gv4-Cd-Pfc" id="qBZ-4p-XZM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lcM-6Y-b1m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Zix-wJ-Fo7" userLabel="Exit" sceneMemberID="exit"/>
