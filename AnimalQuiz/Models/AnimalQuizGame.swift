@@ -10,31 +10,21 @@ import Foundation
 
 class AnimalQuizGame {
     
-    // MARK: - Private Properties
-    private var cat = 0
-    private var dog = 0
-    private var rabbit = 0
-    private var turtle = 0
-    
-    
     // MARK: - Public Methods
     func score(of answers: [Answer]) -> (String, Bool) {
-        answers.forEach {
-            if  $0.type == .cat { cat += 1 }
-            if  $0.type == .dog { dog += 1 }
-            if  $0.type == .rabbit { rabbit += 1 }
-            if  $0.type == .turtle { turtle += 1 }
+        let animalScore = answers.reduce(into: [:]) { counts, answer in
+            counts[answer.type, default: 0] += 1
         }
-        return winAnimal()
+        return winAnimal(score: animalScore)
     }
     
     
     // MARK: - Private Methods
-    private func winAnimal() -> (String, Bool) {
-        if cat == 3 || cat == 2 { return ("You are 🐈‍⬛", true) } else
-        if dog == 3 || dog == 2 { return ("You are 🐕", true) } else
-        if rabbit == 3 || rabbit == 2 { return ("You are 🐇", true) } else
-        if turtle == 3 || turtle == 2 { return ("You are 🐢", true) } else {
+    private func winAnimal(score: [AnimalType : Int]) -> (String, Bool) {
+        if score[.cat] == 3 || score[.cat] == 2 { return ("You are 🐈‍⬛", true) } else
+        if score[.dog] == 3 || score[.dog] == 2 { return ("You are 🐕", true) } else
+        if score[.rabbit] == 3 || score[.rabbit] == 2 { return ("You are 🐇", true) } else
+        if score[.turtle] == 3 || score[.turtle] == 2 { return ("You are 🐢", true) } else {
             return ("Try the test again 🤔", false)
         }
     }
