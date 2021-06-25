@@ -8,7 +8,7 @@
 import Foundation
 
 
-enum AnimalType: Character {
+enum AnimalType: String {
     case cat = "🐈‍⬛"
     case dog = "🐕"
     case rabbit = "🐇"

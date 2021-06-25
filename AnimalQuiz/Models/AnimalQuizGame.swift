@@ -11,21 +11,25 @@ import Foundation
 class AnimalQuizGame {
     
     // MARK: - Public Methods
-    func score(of answers: [Answer]) -> (String, Bool) {
+    func score(of answers: [Answer]) -> (String, String, Bool) {
         let animalScore = answers.reduce(into: [:]) { counts, answer in
             counts[answer.type, default: 0] += 1
         }
-        return winAnimal(score: animalScore)
+        let sortedAnimalScore = animalScore.sorted { $0.value > $1.value }
+        return winAnimal(element: sortedAnimalScore)
     }
     
     
     // MARK: - Private Methods
-    private func winAnimal(score: [AnimalType : Int]) -> (String, Bool) {
-        if score[.cat] == 3 || score[.cat] == 2 { return ("You are 🐈‍⬛", true) } else
-        if score[.dog] == 3 || score[.dog] == 2 { return ("You are 🐕", true) } else
-        if score[.rabbit] == 3 || score[.rabbit] == 2 { return ("You are 🐇", true) } else
-        if score[.turtle] == 3 || score[.turtle] == 2 { return ("You are 🐢", true) } else {
-            return ("Try the test again 🤔", false)
+    private func winAnimal(element: [Dictionary<AnimalType, Int>.Element]) -> (String, String, Bool) {
+        guard element.first != nil else { fatalError() }
+        let firstElement = element.first!
+        if firstElement.value == 3 || firstElement.value == 2 {
+            let animal = firstElement.key.rawValue
+            let definition = firstElement.key.definition
+            return (animal, definition, true)
+        } else {
+            return ("Try the test again 🤔", "", false)
         }
     }
 }

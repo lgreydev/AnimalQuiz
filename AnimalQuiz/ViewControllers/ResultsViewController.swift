@@ -10,7 +10,8 @@ import UIKit
 class ResultsViewController: UIViewController {
     
     // MARK: - IBOutlet
-    @IBOutlet weak var animalLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var definitionLabel: UILabel!
     @IBOutlet weak var restartButton: UIButton!
     
     
@@ -31,7 +32,8 @@ class ResultsViewController: UIViewController {
     // MARK: - Update View
     private func updateUI() {
         let result  = game.score(of: answers)
-        animalLabel.text = result.0
-        restartButton.isHidden = result.1
+        titleLabel.text = result.0
+        definitionLabel.text = result.1
+        restartButton.isHidden = result.2
     }
 }
