@@ -9,6 +9,8 @@ import Foundation
 
 
 struct Question {
+    
+    // MARK: - Public Properties
     let text: String
     let type: ResponseType
     let answers: [Answer]
@@ -19,6 +21,8 @@ struct Question {
         Question(text: "Do you like car trips?", type: .rage, answers: Self.rage)
     ]
     
+    
+    // MARK: - Private Properties
     static private let single = [
     Answer(text: "Fish 🐟", type: .cat),
     Answer(text: "Meat 🍖", type: .dog),

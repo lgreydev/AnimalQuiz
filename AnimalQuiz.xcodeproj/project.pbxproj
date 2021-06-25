@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E023E8D26861401002465D8 /* AnimalQuizGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E023E8C26861401002465D8 /* AnimalQuizGame.swift */; };
 		5E2CF84026775E57007BB2EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CF83F26775E57007BB2EB /* AppDelegate.swift */; };
 		5E2CF84226775E57007BB2EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CF84126775E57007BB2EB /* SceneDelegate.swift */; };
 		5E2CF84426775E57007BB2EB /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CF84326775E57007BB2EB /* WelcomeViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E023E8C26861401002465D8 /* AnimalQuizGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalQuizGame.swift; sourceTree = "<group>"; };
 		5E2CF83C26775E57007BB2EB /* AnimalQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E2CF83F26775E57007BB2EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E2CF84126775E57007BB2EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				5E2CF85F267906BE007BB2EB /* Question.swift */,
 				5E2CF863267944A4007BB2EB /* Answer.swift */,
 				5E2CF861267943DC007BB2EB /* ResponseType.swift */,
+				5E023E8C26861401002465D8 /* AnimalQuizGame.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				5E2CF860267906BE007BB2EB /* Question.swift in Sources */,
 				5E2CF85C2678D1E0007BB2EB /* ResultsViewController.swift in Sources */,
 				5E2CF84226775E57007BB2EB /* SceneDelegate.swift in Sources */,
+				5E023E8D26861401002465D8 /* AnimalQuizGame.swift in Sources */,
 				5E2CF862267943DC007BB2EB /* ResponseType.swift in Sources */,
 				5E2CF864267944A4007BB2EB /* Answer.swift in Sources */,
 				5E2CF86626794556007BB2EB /* AnimalType.swift in Sources */,

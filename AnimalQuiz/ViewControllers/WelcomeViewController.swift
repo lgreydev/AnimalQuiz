@@ -15,22 +15,16 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var rabbitLabel: UILabel!
     @IBOutlet weak var turtleLabel: UILabel!
     
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-//        rotateAnimalLabel()
     }
 
-
+    
+    // MARK: - IBAction
     @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue) {
         // Connect a Triggering Object to the Exit Control
     }
-    
-//    // MARK: - Private Methods
-//    func rotateAnimalLabel() {
-//        catLabel.transform3D = CATransform3DMakeRotation(180, 0.0, 1.0, 0.0)
-//        rabbitLabel.transform3D = CATransform3DMakeRotation(180, 0.0, 0.1, 0.0)
-//    }
-
 }
 

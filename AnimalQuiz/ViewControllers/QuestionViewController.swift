@@ -22,11 +22,11 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var questionProgressView: UIProgressView!
     
     
-    // MARK: - Properties
-    var index = 0
-    var answersChosen: [Answer] = []
-    var currentAnswers: [Answer] { Question.all[self.index].answers }
-    var question: Question { Question.all[self.index] }
+    // MARK: - Private Properties
+    private var index = 0
+    private var answersChosen: [Answer] = []
+    private var currentAnswers: [Answer] { Question.all[self.index].answers }
+    private var question: Question { Question.all[self.index] }
     
     
     // MARK: - Lifecycle
@@ -34,13 +34,12 @@ class QuestionViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
         updateUI()
-        
     }
     
     
-    // MARK: - Update View
-    func updateUI() {
-        
+    // MARK: - Private Methods
+    private func updateUI() {
+    
         let totalProgress =  Float(index) / Float(Question.all.count)
         
         navigationItem.title = "Question \(index + 1)"
@@ -55,7 +54,7 @@ class QuestionViewController: UIViewController {
         case . rage: updateRangedStack()
         }
         
-        /// Block Questions 1 - updateUI
+        /// Call Block Questions 1
         func updateSingleStack() {
             singleStackView.isHidden = false
             for (index, button) in singleButton.enumerated() {
@@ -67,7 +66,7 @@ class QuestionViewController: UIViewController {
             }
         }
         
-        /// Block Questions 2 - updateUI
+        /// Call Block Questions 2
         func updateMultipleStack() {
             multipleStackView.isHidden = false
             multiLabel.forEach { $0.text = "" }
@@ -76,7 +75,7 @@ class QuestionViewController: UIViewController {
             }
         }
         
-        /// Block Questions 3 - updateUI
+        /// Call Block Questions 3
         func updateRangedStack() {
             rangedStackView.isHidden = false
             rangedSlider.value = 1.5
@@ -85,8 +84,8 @@ class QuestionViewController: UIViewController {
         }
     }
     
-    func nextQuestion() {
-        print(index)
+    private func nextQuestion() {
+        print(index) // delete
         index += 1
         index < Question.all.count ? updateUI() : performSegue(withIdentifier: "start", sender: nil)
     }
