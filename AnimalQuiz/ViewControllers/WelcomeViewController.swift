@@ -24,7 +24,6 @@ class WelcomeViewController: UIViewController {
     
     // MARK: - IBAction
     @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue) {
-        // Connect a Triggering Object to the Exit Control
     }
 }
 

@@ -85,7 +85,6 @@ class QuestionViewController: UIViewController {
     }
     
     private func nextQuestion() {
-        print(index) // delete
         index += 1
         index < Question.all.count ? updateUI() : performSegue(withIdentifier: "start", sender: nil)
     }
@@ -103,7 +102,6 @@ class QuestionViewController: UIViewController {
         guard index >= 0 && index < currentAnswers.count else { fatalError() }
         let answer = currentAnswers[index]
         answersChosen.append(answer)
-        answersChosen.forEach { print($0.text) } // delete
         nextQuestion()
     }
     
@@ -114,14 +112,12 @@ class QuestionViewController: UIViewController {
                 answersChosen.append(answer)
             }
         }
-        answersChosen.forEach { print($0.text) } // delete
         nextQuestion()
     }
     
     @IBAction func rangedButtonPressed() {
         let answer = currentAnswers[Int(rangedSlider.value)]
         answersChosen.append(answer)
-        answersChosen.forEach { print($0.text) }
         nextQuestion()
     }
 }
