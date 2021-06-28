@@ -6,3 +6,5 @@ Quiz with questions that determines what kind of animal you are. The application
 <img src="https://github.com/lgreydev/AnimalQuiz/blob/main/Screenshots/screenshot-001.jpg" width="270"><img src="https://github.com/lgreydev/AnimalQuiz/blob/main/Screenshots/screenshot-002.jpg" width="270"><img src="https://github.com/lgreydev/AnimalQuiz/blob/main/Screenshots/screenshot-003.jpg" width="270">
 
 <img src="https://github.com/lgreydev/AnimalQuiz/blob/main/Screenshots/screenshot-004.jpg" width="270"><img src="https://github.com/lgreydev/AnimalQuiz/blob/main/Screenshots/screenshot-005.jpg" width="270"><img src="https://github.com/lgreydev/AnimalQuiz/blob/main/Screenshots/screenshot-006.jpg" width="270">
+
+<img src="https://github.com/lgreydev/AnimalQuiz/blob/main/Screenshots/screenshot-007.jpg" width="270">
